@@ -1,4 +1,4 @@
-#Jatka edellisen tehtävän ohjelmaa siten, että teet Talo-luokan. Talon alustajaparametreina annetaan alimman
+# Jatka edellisen tehtävän ohjelmaa siten, että teet Talo-luokan. Talon alustajaparametreina annetaan alimman
 # ja ylimmän kerroksen numero sekä hissien lukumäärä. Talon luonnin yhteydessä talo luo tarvittavan määrän hissejä.
 # Hissien lista tallennetaan talon ominaisuutena.
 # Kirjoita taloon metodi aja_hissiä, joka saa parametreinaan hissin numeron ja kohdekerroksen.
@@ -30,22 +30,21 @@ class Elevator:
             print("Invalid floor number")
 
 
-class Talo:
-    def __init__(self, bottom_floor, top_floor, hissit):
-        self.bottom_floor = bottom_floor
-        self.top_floor = top_floor
-        self.hissit = []
-        for i in range(hissit):
-            self.hissit.append(Elevator(bottom_floor, top_floor))
+class Building:
+    def __init__(self, elevators, bottom_num, top_num):
+        self.bottom_num = bottom_num
+        self.top_num = top_num
 
-    def aja_hissiä(self, hissi_numero, kohdekerros):
-        if hissi_numero >= 1 and hissi_numero <= len(self.hissit):
-            hissi = self.hissit[hissi_numero-1]
-            hissi.go_to_floor(kohdekerros)
+        self.elevators = [Elevator(bottom_num, top_num) for i in range(elevators)]
+
+    def run_elevator(self, elevator_number, destination):
+
+        self.elevators[elevator_number].go_to_floor(destination)
 
 
-#Hissien kohdekerrokset
-talo = Talo(0, 7, 3)
-talo.aja_hissiä(1, 3)
-talo.aja_hissiä(2, 7)
+# In the main program, write the statements for creating a new building and running the elevators of the building.
 
+new_Building = Building(2, 0, 10)
+
+new_Building.run_elevator(0, 5)
+new_Building.run_elevator(1, 7)
