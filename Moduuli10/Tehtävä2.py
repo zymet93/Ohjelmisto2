@@ -42,9 +42,9 @@ class Building:
         self.elevators[elevator_number].go_to_floor(destination)
 
 
-# In the main program, write the statements for creating a new building and running the elevators of the building.
-
 new_Building = Building(2, 0, 10)
+
+#elevator run floor values
 
 new_Building.run_elevator(0, 5)
 new_Building.run_elevator(1, 7)
