@@ -43,7 +43,7 @@ class Building:
 
 
 #Building (Hissien määrä,botfloor,topfloor)
-new_Building = Building(3, 0, 10)
+new_Building = Building(2, 0, 10)
 
 #elevator run floor values
 
