@@ -82,7 +82,7 @@ while race.race_finished() is not True:
     hour +=1
     race.hour_passes()
     if hour % 10 == 0:
-        print(f'After {hour} hours:')
+        print(f'Tunnit: {hour}')
         race.print_status()
         print()
 print(f'Suuri romuralli päättyi {hour} tunnissa:')

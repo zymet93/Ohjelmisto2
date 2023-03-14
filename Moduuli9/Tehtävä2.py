@@ -28,16 +28,16 @@ class Car:
 
 
 
-new_car=Car('abc-123', 142)
-print( f"Registration Number: {new_car.registration_number}\nMaximum Speed: {new_car.maximum_speed} km/h" \
-               f"\nCurrent Speed: {new_car.current_speed} km/h\nTravelled Distance: {new_car.travelled_distance} km")
+new_car=Car('abc-123', 200)
+print( f"Rekisteri nro: {new_car.registration_number}\nHuippunopeus: {new_car.maximum_speed} km/h" \
+               f"\nNykyinen nopeus: {new_car.current_speed} km/h\nLiikuttu etäisyys: {new_car.travelled_distance}km")
 
 
 new_car.acceleration(30)
-print(f"The current speed is {new_car.current_speed} km/h")
+print(f"Nykyinen nopeus on {new_car.current_speed} km/h")
 new_car.acceleration(70)
-print(f"The current speed is {new_car.current_speed} km/h")
+print(f"Nykyinen nopeus on {new_car.current_speed} km/h")
 new_car.acceleration(50)
-print(f"The current speed is {new_car.current_speed} km/h")
+print(f"Nykyinen nopeus on {new_car.current_speed} km/h")
 new_car.acceleration(-200)
-print(f"The current speed is {new_car.current_speed} km/h")
+print(f"Nykyinen nopeus on {new_car.current_speed} km/h")

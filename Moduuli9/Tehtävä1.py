@@ -15,9 +15,6 @@ class Car:
         self.travelled_distance = 0
 
 
-new_car=Car('abc-123', 70)
-print( f"Registration Number: {new_car.registration_number}\nMaximum Speed: {new_car.maximum_speed} km/h" \
-               f"\nCurrent Speed: {new_car.current_speed} km/h\nTravelled Distance: {new_car.travelled_distance} km")
-
-"""new_car = Car('abc-123', 142)
-new_car.str()"""
+new_car=Car('ABC-123', 142)
+print( f"Rekisteri nro: {new_car.registration_number}\nHuippunopeus: {new_car.maximum_speed} km/h" 
+               f"\nNykyinen nopeus: {new_car.current_speed} km/h\nLiikuttu etäisyys: {new_car.travelled_distance}km")
