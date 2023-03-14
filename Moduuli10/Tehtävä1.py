@@ -12,9 +12,9 @@
 
 class Elevator:
     def __init__(self,bottom_floor,top_floor):
-        self.bottom_floor= bottom_floor
+        self.bottom_floor = bottom_floor
         self.top_floor = top_floor
-        self.current_floor= bottom_floor
+        self.current_floor = bottom_floor
 
 
 
@@ -43,9 +43,11 @@ class Elevator:
 
 
 
-
-h = Elevator(0,7)
-h.go_to_floor(8)
+#Hissi
+h = Elevator(0,5)
 h.go_to_floor(5)
 h.go_to_floor(0)
-[12.33]
+
+
+
+
