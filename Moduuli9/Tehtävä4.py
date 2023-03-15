@@ -5,9 +5,7 @@
 #Kaikkia autoja käsketään liikkumaan yhden tunnin ajan. Tämä tehdään kutsumalla kulje-metodia.
 #Kilpailu jatkuu, kunnes jokin autoista on edennyt vähintään 10000 kilometriä. Lopuksi tulostetaan kunkin auton kaikki ominaisuudet selkeäksi taulukoksi muotoiltuna.
 
-
 import random
-
 class Car:
     def __init__(self, registration_number, maximum_speed):
         self.registration_number = registration_number
@@ -29,8 +27,8 @@ class Car:
 
 cars_list=[]
 
-for i in range(10):
-    cars_list.append(Car(f'abc-{i}', random.randint(100, 200)))
+for i in range(1, 11):
+    cars_list.append(Car(f'ABC-{i}', random.randint(100, 200)))
 
 travMax = 0
 while travMax < 10000:
@@ -38,8 +36,15 @@ while travMax < 10000:
         raceCar.acceleration(random.randint(-10, 15))
         raceCar.drive(1)
         travMax = max(raceCar.travelled_distance, travMax)
+#Print Attributes of cars_list
 for raceCar in cars_list:
-    print(f"{raceCar.registration_number:6s} : {raceCar.maximum_speed} km/h, {raceCar.travelled_distance} km")
-print(f"the winner was able to travel {travMax}")
+    attrs = vars(raceCar)
+    print(', '.join("%s: %s" % item for item in attrs.items()))
+
+
+winner = max(cars_list, key=lambda x: x.travelled_distance)
+print(f"{winner.registration_number} Is the winner! He drove {winner.travelled_distance} km")
+
+
 
 

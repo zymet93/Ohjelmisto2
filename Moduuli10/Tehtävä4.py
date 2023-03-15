@@ -40,7 +40,7 @@ class Race:
         self.name = name
         self.kilometers = kilometers
         self.car_list = car_list
-#tunnit mennyt
+#tunti kuluu, kutsu kulje
     def hour_passes(self):
         for raceCar in cars_list:
             raceCar.acceleration(random.randint(-10, 15))
@@ -71,8 +71,8 @@ class Race:
 
 cars_list = []
 
-for i in range(10):
-    cars_list.append(Car(f'abc-{i}', random.randint(100, 200)))
+for i in range(1, 11):
+    cars_list.append(Car(f'ABC-{i}', random.randint(100, 200)))
 
 race = Race('Suuren romurallin', 8000, cars_list)
 print()

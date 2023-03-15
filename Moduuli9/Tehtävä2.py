@@ -28,7 +28,7 @@ class Car:
 
 
 
-new_car=Car('abc-123', 200)
+new_car=Car('ABC-123', 142)
 print( f"Rekisteri nro: {new_car.registration_number}\nHuippunopeus: {new_car.maximum_speed} km/h" \
                f"\nNykyinen nopeus: {new_car.current_speed} km/h\nLiikuttu etäisyys: {new_car.travelled_distance}km")
 
@@ -40,4 +40,4 @@ print(f"Nykyinen nopeus on {new_car.current_speed} km/h")
 new_car.acceleration(50)
 print(f"Nykyinen nopeus on {new_car.current_speed} km/h")
 new_car.acceleration(-200)
-print(f"Nykyinen nopeus on {new_car.current_speed} km/h")
+print(f"Nykyinen nopeus hätäjarrutuksen jälkeen on {new_car.current_speed} km/h")
